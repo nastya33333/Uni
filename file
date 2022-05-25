@@ -1,0 +1,52 @@
+def clear(board):
+    for i in range(12):
+        for j in range(12):
+            if board[i][j] == '+':
+                board[i][j] = '.'
+            if a[i][j]==9:
+                a[i][j]=0
+            if a[i][j]==99:
+                a[i][j]=0
+
+
+def print_board(board):
+    for i in range(2, 10):
+        for j in range(2, 10):
+            if a[i][j] == 1:
+                board[i][j] = 'P'
+            if a[i][j] == 2:
+                board[i][j] = 'R'
+            if a[i][j] == 3:
+                board[i][j] = 'N'  # Обновление положения белых фигур
+            if a[i][j] == 4:
+                board[i][j] = 'B'
+                # board[i][j-1]=''
+                # board[i][j+1] = ''
+            if a[i][j] == 5:
+                board[i][j] = 'Q'
+            if a[i][j] == 6:
+                board[i][j] = 'K'
+            if a[i][j] == 0:
+                board[i][j] = '.'
+    for i in range(2, 10):
+        for j in range(2, 10):
+            if a[i][j] == 11:
+                board[i][j] = 'p'
+            if a[i][j] == 22:
+                board[i][j] = 'r'
+            if a[i][j] == 33:
+                board[i][j] = 'n'
+            if a[i][j] == 44:
+                board[i][j] = 'b'  # Обновление положения чёрных фигур
+            if a[i][j] == 55:
+                board[i][j] = 'q'
+            if a[i][j] == 66:
+                board[i][j] = 'k'
+            if a[i][j] == 0:
+                board[i][j] = '.'
+            if a[i][j] == 9:
+                board[i][j] = '+'
+            if a[i][j] == 99:
+                board[i][j] = 'x'
+    for row in board:
+        print(" ".join(row))
